@@ -1,0 +1,137 @@
+<style>
+    .card-header {
+        padding: 0.75rem 1.25rem;
+        margin-bottom: 0;
+        background-color: #353844;
+        border-bottom: 1px solid #d1d4d7;
+    }
+</style>
+
+<div class="card">
+    <div class="card-header">
+        <div class="col-md-2">
+            <strong>
+            <div class="sidebar">
+
+                    <ul class="nav">
+                        <li class="nav-item">Nursery Details </li>
+                      </ul>
+
+              </div></strong>
+        </div>
+
+    </div>
+    <div class="card-block">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="form-group">
+
+                    <label for="company"><strong>E-mail ID:</strong>	</label>
+                    <input type="text" class="form-control" id="email" #email placeholder="Enter E-mail ID:">
+                </div>
+            </div>
+
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="street"><strong>Nursery Name:</strong></label>
+                    <input type="text" class="form-control" id="Nursery" #name placeholder="Enter Nursery Name ">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="vat"><strong>Type new password:</strong></label>
+                    <input type="text" class="form-control" id="password" #password placeholder="Enter password">
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="vat"><strong>Retype password:</strong></label>
+                    <input type="text" class="form-control" id="password" #repassword placeholder="Re-Enter password">
+                </div>
+            </div>
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="street"> <strong>Experience:</strong></label>
+                    <input type="text" class="form-control" id="Nursery" #experience placeholder="Enter year of Experience">
+                </div>
+            </div>
+            <div class="col-md-6">
+                <div class="form-group">
+                    <label for="street"><strong>Mobile:</strong></label>
+                    <input type="text" class="form-control" id="street" #mobile placeholder="Enter Mobile Number">
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-12">
+
+                <div class="form-group ">
+                    <label for="street"><strong>Available plants:</strong></label>
+
+
+                    <textarea id="textarea-input" #availablePlants name="textarea-input" rows="3" class="form-control" placeholder="Enter Available plants,  Seperate plants by comma"></textarea>
+
+                </div>
+            </div>
+
+        </div>
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group ">
+                    <label for="street"><strong>More about you:</strong></label>
+
+
+                    <textarea id="textarea-input" #about name="textarea-input" rows="3" class="form-control" placeholder="Enter More about you	"></textarea>
+
+                </div>
+            </div>
+            <div class="col-md-6">
+
+
+                <div class="form-group ">
+                    <label for="street"><strong>Address:</strong></label>
+
+                    <textarea id="textarea-input" #address name="textarea-input" rows="3" class="form-control" placeholder="Enter Address"></textarea>
+
+                </div>
+            </div>
+        </div>
+
+        <div class="row">
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="street"><strong>City:</strong></label>
+                    <input type="text" class="form-control" #city id="street" placeholder="Enter city">
+                </div>
+            </div>
+            <div class="col-md-6">
+
+                <div class="form-group">
+                    <label for="street"><strong>Pin code:</strong></label>
+                    <input type="text" class="form-control" #pincode id="street" placeholder="Enter Password">
+                </div>
+            </div>
+        </div>
+
+        <!-- <div class="form-group row">
+            <label class="col-md-3 form-control-label" for="file-input">Licence</label>
+            <div class="col-md-9">
+                <input type="file" id="file-input" name="file-input">
+            </div>
+        </div> -->
+        <div class="card-footer">
+            <button type="submit" class="btn btn-sm btn-primary" (click)="registerFormer(about.value, address.value, availablePlants.value, city.value, email.value, experience.value, mobile.value, name.value, password.value, pincode.value, repassword.value)"><i class="fa fa-dot-circle-o"></i> I agree the terms and condition on Submiting</button>
+            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Reset</button>
+        </div>
+    </div>
+</div>

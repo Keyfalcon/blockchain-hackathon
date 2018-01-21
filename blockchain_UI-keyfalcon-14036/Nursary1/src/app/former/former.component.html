@@ -1,0 +1,161 @@
+<!--/.row-->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i> Farmer Details
+            </div>
+            <div class="card-block">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sl.no.</th>
+                            <th>Farmer name</th>
+                            <th>Survey number</th>
+                            <th>GPS Location</th>
+                            <th>Area</th>
+                            <th>Source of Water </th>
+                            <th>Soil Type</th>
+                            <th>Adhar Number</th>
+                            <th>Images</th>
+                            <th>Actions</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <ng-container *ngFor="let x of farmer">
+                            <tr>
+                                <td>1</td>
+                                <td>{{x?.name}}</td>
+                                <td>{{x?.survey}}</td>
+                                <td>{{x?.location}}</td>
+                                <td>{{x.area}}</td>
+                                <td>{{x.sourceOfWater}}</td>
+                                <td>{{x.soilType}}</td>
+                                <td>{{x?.adhar}}</td>
+                                <td>
+
+                                    <a data-toggle="tooltip" (click)="open(img)" title="view" class="btn-floating btn-large blue waves-effect waves-light ">
+
+                                        <img src="{{x.image}}" width="42" height="42">
+                                    </a>
+
+
+
+                                </td>
+                                <ng-template #img let-c="close" let-d="dismiss">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="{{x.image}}" width="300" height="250">
+
+                                    </div>
+                                </ng-template>
+
+                                <td>
+                                    <span title="Approve">
+                                  <button ng-click="editUser()" class="btn btn-sm btn-success " style="margin-top: 07px"><i class="fa fa-check"></i>
+                                </button>
+                              </span>
+
+                                    <!-- <button click="open(content)" class="btn btn-sm btn-danger " style="margin-top: 07px"><i class="fa fa-ban"></i>
+                                </button> -->
+                                    <span title="reject">
+
+                                <a data-toggle="tooltip" class="btn btn-sm btn-danger " (click)="open(content)" style="margin-top: 07px" title="Reject"><i class="fa fa-ban"></i>
+                                </a>
+                                </span>
+                                    <ng-template #content let-c="close" let-d="dismiss">
+                                        <div class="modal-header">
+                                            <h4 class="modal-title">Reason for rejection</h4>
+                                            <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+            <span aria-hidden="true">&times;</span>
+          </button>
+                                        </div>
+                                        <div class="modal-body">
+
+
+
+
+
+                                            <div class="row">
+                                                <div class="col-md-12">
+                                                    <div class="card">
+                                                        <div class="card-header">
+                                                            <strong>Details</strong>
+                                                        </div>
+                                                        <div class="card-block">
+                                                            <form novalidate>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-3 form-control-label">Survey no.</label>
+                                                                    <div class="col-md-9">
+                                                                        <input type="text" required id="text-input" name="text-input" class="form-control" placeholder="1245">
+
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-3 form-control-label">Reason</label>
+                                                                    <div class="col-md-9">
+
+                                                                        <select class="form-control">
+                            <option [value]=null selected="selected" disabled> Select Reason </option>
+                            <option value="">Inadequate Land </option>
+                            <option value="">No proper water resource </option>
+                            <option value="">Poor Soil quality  </option>
+                            <option value="">Documents mismatch</option>
+
+                        </select>
+                                                                    </div>
+                                                                </div>
+                                                                <div class="form-group row">
+                                                                    <label class="col-md-3 form-control-label">Comments.</label>
+                                                                    <div class="col-md-9">
+                                                                        <input type="text" required id="text-input" name="text-input" class="form-control" placeholder="Enter Comments">
+
+                                                                    </div>
+                                                                </div>
+                                                            </form>
+                                                        </div>
+                                                        <div class="card-footer">
+                                                            <button type="submit" class="btn btn-sm btn-primary"><i class="fa fa-dot-circle-o"></i> Submit</button>
+                                                            <button type="reset" class="btn btn-sm btn-danger"><i class="fa fa-ban"></i> Clear</button>
+                                                        </div>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                            <!--/.row-->
+
+
+                                        </div>
+
+                                    </ng-template>
+                                    <span title="clarify">
+
+                                <button ng-click="showClone(x)" class="btn btn-sm btn-warning " style="margin-top: 07px"><i class="fa fa-outdent"></i>
+                                </button>
+                                </span>
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+</div>
+<!--/.row-->

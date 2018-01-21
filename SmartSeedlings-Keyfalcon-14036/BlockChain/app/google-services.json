@@ -1,0 +1,55 @@
+{
+  "project_info": {
+    "project_number": "428978682819",
+    "firebase_url": "https://blockchain-192709.firebaseio.com",
+    "project_id": "blockchain-192709",
+    "storage_bucket": "blockchain-192709.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:428978682819:android:4e6f8a87bacd4244",
+        "android_client_info": {
+          "package_name": "com.keyfalcon.blockchain"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "428978682819-4sdf0tmhi2rc942efiorpcnl9j4fk9pr.apps.googleusercontent.com",
+          "client_type": 1,
+          "android_info": {
+            "package_name": "com.keyfalcon.blockchain",
+            "certificate_hash": "3c721196b64ba4555d531ea822dc1a5784900897"
+          }
+        },
+        {
+          "client_id": "428978682819-6kp8c9qns079n0ikfugnbnihhrdqol70.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBrkmIkHMWB4qZFf_ZE2NbXLw7xaiatLNk"
+        }
+      ],
+      "services": {
+        "analytics_service": {
+          "status": 1
+        },
+        "appinvite_service": {
+          "status": 2,
+          "other_platform_oauth_client": [
+            {
+              "client_id": "428978682819-6kp8c9qns079n0ikfugnbnihhrdqol70.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        },
+        "ads_service": {
+          "status": 2
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

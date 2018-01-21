@@ -1,0 +1,23 @@
+<resources>
+    <string name="app_name">Smart Seedling</string>
+
+    <string name="title_activity_login">Login</string>
+    <string name="title_activity_register">Register</string>
+
+    <string-array name="waterSource">
+        <item>Pond</item>
+        <item>Well</item>
+        <item>Borewell</item>
+        <item>Others</item>
+    </string-array>
+    <string name="title_activity_dashboard">Dashboard</string>
+    <string name="title_activity_addLands">Add Lands</string>
+    <string name="try_again">Please try again later</string>
+    <string name="title_activity_otp">OtpAct</string>
+    <string name="title_activity_request_seedlings">Request Seedlings</string>
+    <string name="title_activity_notifications">Notifications</string>
+    <string name="title_activity_status_update">Status Update</string>
+    <string name="title_activity_land_survey_details">Land Survey Details</string>
+    <string name="title_activity_my_schedules">My Schedules</string>
+    <string name="title_activity_my_payments">My Payments</string>
+</resources>
