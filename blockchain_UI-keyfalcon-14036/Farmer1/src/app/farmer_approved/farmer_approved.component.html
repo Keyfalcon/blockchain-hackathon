@@ -1,0 +1,81 @@
+<!--/.row-->
+<div class="row">
+    <div class="col-lg-12">
+        <div class="card">
+            <div class="card-header">
+                <i class="fa fa-align-justify"></i> Former Approved
+            </div>
+            <div class="card-block">
+                <table class="table table-bordered table-striped">
+                    <thead>
+                        <tr>
+                            <th>Sl.no.</th>
+                            <th>Farmer name</th>
+                            <th>Survey number</th>
+                            <th>GPS Location</th>
+                            <th>Area</th>
+                            <th>Source of Water </th>
+                            <th>Soil Type</th>
+                            <th>Adhar Number</th>
+                            <th>Images</th>
+                            <th>Status</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+
+                        <ng-container *ngFor="let x of farmer">
+                            <tr>
+                                <td>{{x?.id}}</td>
+                                <td>{{x?.name}}</td>
+                                <td>{{x?.survey}}</td>
+                                <td>{{x?.location}}</td>
+                                <td>{{x.area}}</td>
+                                <td>{{x.sourceOfWater}}</td>
+                                <td>{{x.soilType}}</td>
+                                <td>{{x?.adhar}}</td>
+                                <td>
+
+                                    <a data-toggle="tooltip" (click)="open(img)" title="view" class="btn-floating btn-large blue waves-effect waves-light ">
+
+                                        <img src="{{x.image}}" width="42" height="42">
+                                    </a>
+                                </td>
+
+                                <ng-template #img let-c="close" let-d="dismiss">
+                                    <div class="modal-header">
+                                        <button type="button" class="close" aria-label="Close" (click)="d('Cross click')">
+                                      <span aria-hidden="true">&times;</span>
+                                    </button>
+                                    </div>
+                                    <div class="modal-body text-center">
+                                        <img src="{{x.image}}" width="300" height="250">
+
+                                    </div>
+                                </ng-template>
+
+                                <td class="btn-success ">
+
+                                    Approved
+                                </td>
+                            </tr>
+                        </ng-container>
+                    </tbody>
+                </table>
+                <nav>
+                    <ul class="pagination">
+                        <li class="page-item"><a class="page-link" href="#">Prev</a></li>
+                        <li class="page-item active">
+                            <a class="page-link" href="#">1</a>
+                        </li>
+                        <li class="page-item"><a class="page-link" href="#">2</a></li>
+                        <li class="page-item"><a class="page-link" href="#">3</a></li>
+                        <li class="page-item"><a class="page-link" href="#">4</a></li>
+                        <li class="page-item"><a class="page-link" href="#">Next</a></li>
+                    </ul>
+                </nav>
+            </div>
+        </div>
+    </div>
+    <!--/.col-->
+</div>
+<!--/.row-->

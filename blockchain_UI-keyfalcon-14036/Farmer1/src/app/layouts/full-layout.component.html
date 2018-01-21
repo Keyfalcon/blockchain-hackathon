@@ -1,0 +1,74 @@
+<style>
+    header.navbar .navbar-brand {
+        background-size: 150px auto;
+    }
+</style>
+<header class="app-header navbar">
+    <button class="navbar-toggler d-lg-none" type="button" appMobileSidebarToggler>&#9776;</button>
+    <a class="navbar-brand" href="#"></a>
+    <ul class="nav navbar-nav mr-auto d-md-down-none">
+        <li class="nav-item">
+            <a class="nav-link navbar-toggler" href="#" appSidebarToggler>&#9776;</a>
+        </li>
+        <li>
+            <strong>Land Records Department</strong>
+        </li>
+    </ul>
+    <ul class="nav navbar-nav pull-right hidden-md-down">
+        <li class="nav-item dropdown">
+            <span>Logout</span>
+            <div class="dropdown-menu dropdown-menu-right">
+                <a class="dropdown-item" (click)="logoutFun()">
+                    <i class="fa fa-lock"></i> Logout</a>
+            </div>
+        </li>
+    </ul>
+</header>
+
+<div class="app-body">
+    <div class="sidebar">
+        <nav class="sidebar-nav">
+            <ul class="nav">
+                <li class="nav-item">
+                    <a class="nav-link" routerLinkActive="active" [routerLink]="['/dashboard']"><i class="icon-speedometer"></i> Dashboard <span class="badge badge-info">NEW</span></a>
+                </li>
+                <li class="nav-item nav-dropdown" routerLinkActive="open" appNavDropdown>
+                    <a class="nav-link nav-dropdown-toggle" href="#" appNavDropdownToggle><i class="icon-puzzle"></i> Farmer </a>
+                    <ul class="nav-dropdown-items">
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/farmer']"><i class="icon-puzzle"></i> Pending</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/farmer_approved']"><i class="icon-puzzle"></i>  Approved</a>
+                        </li>
+                        <li class="nav-item">
+                            <a class="nav-link" routerLinkActive="active" [routerLink]="['/farmer_rejected']"><i class="icon-puzzle"></i> Rejected</a>
+                        </li>
+                    </ul>
+                </li>
+
+
+            </ul>
+        </nav>
+    </div>
+
+    <!-- Main content -->
+    <main class="main">
+
+        <!-- Breadcrumb -->
+        <ol class="breadcrumb">
+            <app-breadcrumbs></app-breadcrumbs>
+        </ol>
+
+        <div class="container-fluid">
+            <router-outlet></router-outlet>
+        </div>
+        <!-- /.conainer-fluid -->
+    </main>
+</div>
+
+<footer class="app-footer">
+    <a href="http://www.keyfalconsolutions.com/">Keyfalcon</a> &copy; 2018 creativeLabs.
+    <span class="float-right">Powered by <a href="http://www.keyfalconsolutions.com/">Keyfalcon</a>
+    </span>
+</footer>

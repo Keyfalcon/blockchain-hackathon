@@ -1,0 +1,107 @@
+<style>
+    form.login input[type="text"],
+    form.login input[type="password"] {
+        width: 100%;
+        margin: 0;
+        padding: 5px 10px;
+        background: 0;
+        border: 0;
+        border-bottom: 1px solid #FFFFFF;
+        outline: 0;
+        font-style: italic;
+        font-size: 12px;
+        font-weight: 400;
+        letter-spacing: 1px;
+        margin-bottom: 5px;
+        color: #FFFFFF;
+        outline: 0;
+    }
+    
+    form {
+        width: 250px;
+        margin: 0 auto;
+    }
+    
+    .alert-danger {
+        background-color: #f2dede;
+        border-color: #ebcccc;
+        color: #a94442;
+        font-style: italic;
+    }
+    
+    form.login input[type="submit"] {
+        width: 100%;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 16px;
+        outline: 0;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+    
+    .pass-reset input[type="submit"] {
+        width: 100%;
+        border: 0;
+        font-size: 14px;
+        text-transform: uppercase;
+        font-weight: 500;
+        margin-top: 10px;
+        outline: 0;
+        cursor: pointer;
+        letter-spacing: 1px;
+    }
+    
+    .justify-content-center {
+        -webkit-box-pack: center !important;
+        -ms-flex-pack: center !important;
+        justify-content: center !important;
+        width: 400px;
+    }
+    
+    .pass-reset input[type="submit"]:hover {
+        transition: background-color 0.5s ease;
+    }
+    
+    .text-muted {
+        color: black;
+        font-style: italic;
+    }
+</style>
+<toaster-container></toaster-container>
+<div class="app flex-row align-items-center" style="background-image: url('assets/img/hejje.jpg');">
+    <!--<h1 style="color: white;text-align: center">-->
+    <!--<img width="120px" src="assets/img/logo.png"> </h1>-->
+    <div class="container">
+        <form [formGroup]="userForm" (submit)="login()" class="login" style="margin-top: 120px">
+            <div class="row justify-content-center">
+                <div class="col-md-12" style="margin-bottom: 50%; margin-right: 90%">
+
+                    <h1 style="color: white;">KAPY</h1>
+                    <h5 style="color: white; font-style:italic;">KAPY application</h5>
+                    <div class="input-group mb-3">
+                        <span class="input-group-addon"><i class="icon-user"></i></span>
+                        <input [(ngModel)]="username" type="text" class="form-control" formControlName="username" placeholder="Username" required>
+
+                    </div>
+                    <div class="input-group mb-4">
+                        <span class="input-group-addon"><i class="icon-lock"></i></span>
+                        <input [(ngModel)]="password" type="password" class="form-control" formControlName="password" placeholder="Password" required>
+
+                    </div>
+                    <div class="row">
+                        <div class="col-6">
+                            <button type="button" type="submit" class="btn btn-primary px-4">Login</button>
+                        </div>
+
+                    </div>
+                </div>
+            </div>
+        </form>
+        <div class="row pull-left" style="color: white; float:right;">
+            Copyright © 2017 <a href="http://www.keyfalconsolutions.com" target="_blank" style="font-weight: bold;color: rgb(204, 221, 53);"> Keyfalcon Solutions.</a> All rights reserved.
+
+
+        </div>
+    </div>
+</div>
